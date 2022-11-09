@@ -14,6 +14,7 @@ import {
 import { MetaFunction, LinksFunction } from '@remix-run/node' // Depends on the runtime you choose
 import { ClientStyleContext, ServerStyleContext } from './lib/chakra/context'
 import styles from "./styles/app.css"
+import NavBar from './components/NavBar'
 
 const colors = {
   brand: {
@@ -81,6 +82,7 @@ const Document = withEmotionCache(
           ))}
         </head>
         <body>
+          <NavBar />
           {children}
           <ScrollRestoration />
           <Scripts />
