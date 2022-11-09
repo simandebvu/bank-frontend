@@ -1,6 +1,7 @@
 
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import StatsCard from '~/components/StatsCard';
+import StatsTabs from '~/components/StatsTabs';
 export default function Index() {
   const stats = [
     {
@@ -25,14 +26,23 @@ export default function Index() {
   return (
     <div>
       <div className="relative bg-[url('https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_960_720.jpg')] bg-cover md:pt-10 pb-32 pt-12">
-      <h1 className="text-7xl  text-gray-500 p-5 font-bold">
-        The Reserve Bank Of Wakanda
-      </h1>
+        <h1 className="text-7xl  text-gray-500 p-5 font-bold">
+          The Reserve Bank Of Wakanda
+        </h1>
         <div className="flex flex-wrap w-full">
           {stats.map((stat, i) => (
             <StatsCard {...stat} />
           ))}
         </div>
+      </div>
+      <div className="md:flex p-10">
+        <div className="w-full md:w-1/2">
+            <StatsTabs/>
+        </div>
+        <div className="w-full md:w-1/2">
+
+        </div>
+
       </div>
 
 
