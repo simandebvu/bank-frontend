@@ -81,7 +81,7 @@ const Document = withEmotionCache(
             />
           ))}
         </head>
-        <body>
+        <body className=''>
           <NavBar />
           {children}
           <ScrollRestoration />
